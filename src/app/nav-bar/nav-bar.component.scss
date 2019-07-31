@@ -1,0 +1,136 @@
+.navcustom{
+    padding:0 0 ;
+}
+.font-title-name{
+    font-weight:600;
+    font-size:x-large;    
+}
+.logofont
+{
+    color: #d12a06;
+    font-weight:600;
+    font-size:x-large;     
+    text-align:center;
+    padding: 3rem;
+    
+}
+a{
+    color:white;
+}
+.element {
+    display: inline-block;
+    background-color: #d12a06;
+    height: 100px;
+    width: 200px;
+     
+   /*padding: 1px;*/
+    color: white;
+    margin-right: 3px;
+    margin-left: 3px;
+    /*animation: skew 3s infinite;*/
+    transform: skew(-50deg);
+    /*animation-direction: alternate;*/
+    opacity: .7;
+  }
+  
+  /*.elmdiv1{
+      width: 300px;
+      background-color: #0074d9;*/
+  
+  .elmdiv2{
+      width: 2.6%;
+      background-color: #f5e6e0;
+      opacity:00;
+  }
+  .elmdiv3{
+      width: 6.5%;
+  }
+  .elmdiv4{
+      width: 4%;
+  }
+  .elmdiv5{
+      width: .5%;
+  }
+  .elmdiv6{
+    width: 2.6%;
+    opacity:00;
+}
+  
+  .elmdiv1 {
+      display: inline-block;
+    background-color: White;
+    height: 100px;
+    width: 40%;
+     /*font-size: 1px;
+   padding: 1px;*/
+    color: white;
+    margin-right: 3px;
+    margin-left: 3px;
+    opacity: .7;
+
+    z-index: 1;
+    
+  }
+ /* .elmdiv1:before {
+      content: " ";
+     /*position: absolute;
+    position: relative;
+      display: inline-block;
+      width: 99.8%;
+      height: 100px;
+      top: 0;
+      left: 0;
+      
+      background:#d12a06;
+      transform-origin: bottom right;
+      -ms-transform: skew(-30deg, 0deg);
+      -webkit-transform: skew(-30deg, 0deg);
+      transform: skew(-50deg, 0deg);
+      border: 1px solid #0074d9;
+  }*/
+  
+  .elmdiv7{
+      display: inline-block;
+    background-color: #d12a06;
+    height: 100px;
+    width: 35.6%;
+   /* font-size: 1px;
+    padding: 1px;
+    color: white;*/
+    margin-right: 3px;
+    margin-left: 3px;
+   /* transform: skew(-50deg);*/
+    opacity: .7;
+  }
+  .elmdiv7:before {
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    width: 20%;
+    height: 100px;
+   /* top: 0;
+    left: 0;*/
+    z-index: -1;
+    background:#d12a06;
+    transform-origin: right top;
+    /*-ms-transform: skew(30deg, 0deg);
+    -webkit-transform: skew(-30deg, 0deg);*/
+    transform: skew(-50deg, 0deg);
+}
+  /*
+ .elmdiv7:before {
+      content: " ";
+      /*position: absolute;
+      display: inline-block;
+      width: 199px;
+      height: 100px;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background:#b9eb79;
+      transform-origin: right top;
+      -ms-transform: skew(-30deg, 0deg);
+      -webkit-transform: skew(-30deg, 0deg);
+      transform: skew(50deg, 0deg);
+  }*/
+      
