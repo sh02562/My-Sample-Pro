@@ -1,0 +1,70 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .fieldheight{
+      height: 30rem;
+  }
+
+  .breadcrumBackColor{
+      background-color: transparent;
+      
+      
+  }
+
+  .testcolor{
+    color: #d12a06;
+    font-weight:500;
+  }
+  .breadcrumb>li+li:before { padding: 0 5px; color:#d12a06 ; content: ">"; }
+
+  /* Tab Bar Starts */
+  .nav-link.active{
+    color: white;
+background-color: #fc5a45;
+border-color: #dee2e6 #dee2e6 #fff;
+
+}
+.acustom{
+    color:rgb(110, 94, 94);
+    border:1px solid rgba(204, 200, 200, 0.54);    
+}
+.acustomdate{
+    color:rgb(77, 65, 65);
+    border:1px solid rgb(204, 200, 200, 0.54);
+    background-color: white;
+    font-weight: 500;
+    
+}
+.testpad{
+padding: 0rem 0rem 0rem 0rem;
+background-color: rgb(219, 219, 219);
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+
+
+  /* Tab Bar Ends  */
+
+  /* Next Button starts  */
+
+  .backcolor{
+background-color: #fc5a45;
+  }
+
+    /* Next Button Ends  */
