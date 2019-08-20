@@ -12,18 +12,6 @@
       height: 30rem;
   }
 
-  .breadcrumBackColor{
-      background-color: transparent;
-      
-      
-  }
-
-  .testcolor{
-    color: #d12a06;
-    font-weight:500;
-  }
-  .breadcrumb>li+li:before { padding: 0 5px; color:#d12a06 ; content: ">"; }
-
   /* Tab Bar Starts */
   .nav-link.active{
     color: white;
@@ -56,15 +44,5 @@ background-color: rgb(219, 219, 219);
   .example-full-width {
     width: 100%;
   }
-  
+    /* Tab Bar Ends  */
 
-
-  /* Tab Bar Ends  */
-
-  /* Next Button starts  */
-
-  .backcolor{
-background-color: #fc5a45;
-  }
-
-    /* Next Button Ends  */
