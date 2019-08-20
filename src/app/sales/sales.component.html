@@ -1,1 +1,526 @@
-<p>sales works!</p>
+<!--Tab End -->
+    <div *ngIf="!next" >
+    <nav aria-label="breadcrumb" >
+      <ol class="breadcrumb breadcrumBackColor testcolor">
+        <li class="breadcrumb-item" ><a class="testcolor" href="#">Sales</a></li>
+        <li class="breadcrumb-item"><a class="testcolor"  href="#">FG Sales</a></li>
+        <li class="breadcrumb-item"><a class="testcolor"  href="#">Enquiry Management</a></li>
+        <li class="breadcrumb-item " aria-current="page">Create Enquiry</li>
+      </ol>
+    </nav>
+
+    <!-- 1st Row -->
+    <h5>Dealer Details</h5>
+    <div class="row">
+        <mat-form-field class="col">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          
+
+    <mat-form-field class="col">
+      <mat-label>Dealer Branch/ Outlet</mat-label>
+      <mat-select >
+        <mat-option value="option1">Option 1</mat-option>   
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="col">
+      <mat-label>Sales Officers</mat-label>
+      <mat-select >
+        <mat-option value="option1">Option 1</mat-option>   
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="col">
+      <mat-label>Source</mat-label>
+      <mat-select >
+        <mat-option value="option1">Option 1</mat-option>   
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="col">
+      <mat-label>Source Details</mat-label>
+      <mat-select >
+        <mat-option value="option1">Option 1</mat-option>   
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="col">
+      <mat-label>Ongoing Events</mat-label>
+      <mat-select >
+        <mat-option value="option1">Option 1</mat-option>   
+      </mat-select>
+    </mat-form-field>
+
+    </div>
+    <br>
+    <!-- 1st Row ends -->
+
+    <!-- 2nd Row Starts -->
+    <h5>Prospect Details</h5>
+      <div class="row">
+          
+          <mat-form-field class="col">
+              <mat-label>Customer Type</mat-label>
+              <mat-select >
+                <mat-option value="option1">Option 1</mat-option>   
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="col">
+                <mat-label>Title</mat-label>
+                <mat-select >
+                  <mat-option value="option1">Option 1</mat-option>   
+                </mat-select>
+              </mat-form-field>
+              
+
+        <mat-form-field appearance="outline" class="col">
+          <mat-label>First Name </mat-label>
+          <input matInput >      
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="col">
+              <mat-label>Relation</mat-label>
+              <input matInput >                  
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Middle Name</mat-label>
+              <input matInput >                   
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Last Name</mat-label>
+              <input matInput >
+            </mat-form-field>    
+      
+    </div>
+    <!-- 2nd Row ends -->
+
+    <!-- 3rd Row Starts -->
+
+      <div class="row">
+          
+          <mat-form-field appearance="outline" class="col">
+              <mat-label>Date of Birth </mat-label>
+              <input matInput >         
+            </mat-form-field>
+
+            <mat-form-field class="col">
+                <mat-label>Age</mat-label>
+                <mat-select >
+                  <mat-option value="option1">Option 1</mat-option>   
+                </mat-select>
+              </mat-form-field>
+              
+
+        <mat-form-field appearance="outline" class="col">
+          <mat-label>Mobile Number </mat-label>
+          <input matInput >      
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="col">
+              <mat-label>Alternet Mobile Number</mat-label>
+              <input matInput >         
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Email</mat-label>
+              <input matInput >
+            </mat-form-field> 
+
+              <mat-form-field class="col">
+                  <mat-label>Country</mat-label>
+                  <mat-select >
+                    <mat-option value="option1">Option 1</mat-option>   
+                  </mat-select>
+                </mat-form-field> 
+      
+    </div>
+    <!-- 3rd Row ends -->
+
+    <!-- 4th Row Starts -->
+
+      <div class="row">
+
+          <mat-form-field appearance="outline" class="col">
+              <mat-label>Territory </mat-label>
+              <input matInput >      
+            </mat-form-field>
+
+            <mat-form-field class="col">
+                <mat-label>State</mat-label>
+                <mat-select >
+                  <mat-option value="option1">Option 1</mat-option>   
+                </mat-select>
+              </mat-form-field>
+              
+
+              <mat-form-field class="col">
+                  <mat-label>District</mat-label>
+                  <mat-select >
+                    <mat-option value="option1">Option 1</mat-option>   
+                  </mat-select>
+                </mat-form-field>
+
+        <mat-form-field appearance="outline" class="col">
+              <mat-label>Tehsil</mat-label>
+              <input matInput >       
+            </mat-form-field> 
+
+              <mat-form-field class="col">
+                  <mat-label>City/Village</mat-label>
+                  <mat-select >
+                    <mat-option value="option1">Option 1</mat-option>   
+                  </mat-select>
+                </mat-form-field>
+            
+            
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Pin Code</mat-label>
+              <input matInput >
+            </mat-form-field>    
+      
+    </div>
+    <!--4th  Row ends -->
+
+    <!-- 5th Row Starts -->
+    <h5>Prospect Background</h5>
+      <div class="row">
+          
+          <mat-form-field class="col">
+              <mat-label>Annual Income</mat-label>
+              <mat-select >
+                <mat-option value="option1">Option 1</mat-option>   
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="col">
+                <mat-label>Occupation</mat-label>
+                <mat-select >
+                  <mat-option value="option1">Option 1</mat-option>   
+                </mat-select>
+              </mat-form-field>
+              
+
+        <mat-form-field appearance="outline" class="col">
+          <mat-label>Land Size (In Acres) </mat-label>
+          <input matInput >
+          </mat-form-field>
+
+          <mat-form-field class="col">
+              <mat-label>Soil Type Consistency</mat-label>
+              <mat-select >
+                <mat-option value="option1">Option 1</mat-option>   
+              </mat-select>
+            </mat-form-field>
+            
+            
+            <mat-form-field class="col">
+                <mat-label>Crops Grown</mat-label>
+                <mat-select >
+                  <mat-option value="option1">Option 1</mat-option>   
+                </mat-select>
+              </mat-form-field>
+            
+            
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Wheat Rice</mat-label>
+              <input matInput >
+            </mat-form-field>    
+      
+    </div>
+    <!-- 5th Row ends -->
+
+    <!-- 6th Row Starts -->
+    <h5>Tractor Details</h5>
+      <div class="row">
+          
+          <mat-form-field class="col">
+              <mat-label>Make</mat-label>
+              <mat-select >
+                <mat-option value="option1">Option 1</mat-option>   
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="col">
+                <mat-label>Model</mat-label>
+                <mat-select >
+                  <mat-option value="option1">Option 1</mat-option>   
+                </mat-select>
+              </mat-form-field>
+              
+
+              <mat-form-field class="col">
+                  <mat-label>HP</mat-label>
+                  <mat-select >
+                    <mat-option value="option1">Option 1</mat-option>   
+                  </mat-select>
+                </mat-form-field>
+                
+          
+        <mat-form-field appearance="outline" class="col">
+              <mat-label>Relation</mat-label>
+              <input matInput >         
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Middle Name</mat-label>
+              <input matInput >         
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="col">
+              <mat-label>Last Name</mat-label>
+              <input matInput >
+            </mat-form-field>    
+      
+    </div>
+    <!-- 6th Row ends -->
+  </div>
+  <div  align="center"  class="example-button-row">
+
+      <button *ngIf="!next" (click)="next=true" mat-raised-button color="warn">Next</button>
+      
+      
+    </div>
+
+  <!--Previous Page Div Start-->
+
+
+  <div *ngIf="next">
+    <!--Breadcrum Starts -->
+    <!--<div *ngIf="!next" > -->
+        <nav aria-label="breadcrumb" >
+          <ol class="breadcrumb breadcrumBackColor testcolor">
+            <li class="breadcrumb-item" ><a class="testcolor" href="#">Sales</a></li>
+            <li class="breadcrumb-item"><a class="testcolor"  href="#">FG Sales</a></li>
+            <li class="breadcrumb-item"><a class="testcolor"  href="#">Enquiry Management</a></li>
+            <li class="breadcrumb-item " aria-current="page">Create Enquiry</li>
+          </ol>
+        </nav>
+        <!--Breadcrum Ends -->
+      <!-- 1st Row Starts -->
+    <h5>Existing Machine Details</h5>
+    <div class="row">
+        
+        <mat-form-field class="col">
+            <mat-label>PTO Driven Equipment</mat-label>
+            <mat-select >
+              <mat-option value="option1">Option 1</mat-option>   
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="col">
+              <mat-label>Select Make</mat-label>
+              <mat-select >
+                <mat-option value="option1">Option 1</mat-option>   
+              </mat-select>
+            </mat-form-field>
+            
+
+            <mat-form-field class="col">
+                <mat-label>Equipment Make</mat-label>
+                <mat-select >
+                  <mat-option value="option1">Option 1</mat-option>   
+                </mat-select>
+              </mat-form-field>
+              
+        
+              <mat-form-field class="col">
+                  <mat-label>Select Product</mat-label>
+                  <mat-select >
+                    <mat-option value="option1">Option 1</mat-option>   
+                  </mat-select>
+                </mat-form-field>
+
+         <div class="col">
+
+         </div> 
+         <div class="col">
+
+          </div> 
+    
+  </div>
+  <!-- 1st Row ends -->
+
+              <!-- 2nd Row Starts -->
+              <h5>Interested Machine Details</h5>
+              <div class="row">
+                  
+                  <mat-form-field class="col">
+                      <mat-label>Select Product Catagory</mat-label>
+                      <mat-select >
+                        <mat-option value="option1">Option 1</mat-option>   
+                      </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="col">
+                        <mat-label>Select Product Sub Catagory</mat-label>
+                        <mat-select >
+                          <mat-option value="option1">Option 1</mat-option>   
+                        </mat-select>
+                      </mat-form-field>
+                      
+
+                      <mat-form-field class="col">
+                          <mat-label>Select Product Type</mat-label>
+                          <mat-select >
+                            <mat-option value="option1">Option 1</mat-option>   
+                          </mat-select>
+                        </mat-form-field>
+                     
+                        <div class="col">
+
+                          </div> 
+                    <div class="col">
+
+                    </div> 
+                    <div class="col">
+
+                    </div> 
+              
+              </div>
+              <!-- 2nd Row ends -->
+
+            <!-- 3rd Row Starts -->
+
+            <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th scope="col">Sr.No</th>
+                    <th scope="col">Specification</th>
+                    <th scope="col">Select Specification </th>       
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">01</th>
+                    <td> Model</td>
+                    <td></td>
+                    <td></td>
+                    <td> <mat-form-field >
+                      <mat-label>Select </mat-label>
+                      <mat-select >
+                        <mat-option value="option1">Option 1</mat-option>   
+                      </mat-select>
+                    </mat-form-field></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">02</th>
+                    <td>Variant</td>
+                    <td></td>
+                    <td></td>
+                    <td><mat-form-field >
+                      <mat-label>Select </mat-label>
+                      <mat-select >
+                        <mat-option value="option1">Option 1</mat-option>   
+                      </mat-select>
+                    </mat-form-field></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">03</th>
+                    <td colspan="2">
+                      Speed
+                    </td>
+                    <td></td>
+                    <td><mat-form-field >
+                      <mat-label>Select </mat-label>
+                      <mat-select >
+                        <mat-option value="option1">Option 1</mat-option>   
+                      </mat-select>
+                    </mat-form-field></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">04</th>
+                    <td colspan="2">
+                    Blade
+                    </td>
+                    <td></td>
+                    <td><mat-form-field >
+                      <mat-label>Select </mat-label>
+                      <mat-select >
+                        <mat-option value="option1">Option 1</mat-option>   
+                      </mat-select>
+                    </mat-form-field></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">05</th>
+                    <td colspan="2">
+                     Gear Type
+                    </td>
+                    <td></td>
+                    <td><mat-form-field >
+                      <mat-label>Select </mat-label>
+                      <mat-select >
+                        <mat-option value="option1">Option 1</mat-option>   
+                      </mat-select>
+                    </mat-form-field></td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- 3rd Row ends -->
+
+          <!-- 4th Row Starts -->
+        
+          <div class="row">
+              
+              <mat-form-field class="col">
+                  <mat-label>Purpose of Purchase</mat-label>
+                  <mat-select >
+                    <mat-option value="option1">Option 1</mat-option>   
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="col">
+                    <mat-label>Whatever Subsidy Required</mat-label>
+                    <mat-select >
+                      <mat-option value="option1">Option 1</mat-option>   
+                    </mat-select>
+                  </mat-form-field>
+                  
+
+                  <mat-form-field class="col">
+                      <mat-label>Payment Mode</mat-label>
+                      <mat-select >
+                        <mat-option value="option1">Option 1</mat-option>   
+                      </mat-select>
+                    </mat-form-field>
+
+                 <mat-form-field class="col">
+                        <input matInput [matDatepicker]="picker" placeholder="Expected Dilevery Date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+
+                     
+            <!--  <mat-form-field class="col">
+                          <input matInput [matDatepicker]="picker" placeholder="Next Folloe-up Date">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+
+                           <mat-form-field class="col">
+                            <mat-label>Recommendate Financer</mat-label>
+                            <mat-select >
+                              <mat-option value="option1">Option 1</mat-option>   
+                            </mat-select>
+                          </mat-form-field>--> 
+          
+          </div>
+          <!-- 4th Row ends -->
+
+
+    </div>
+  <!--Previous Page Div Ends-->
+
+ 
+      <div  align="center"  class="example-button-row">
+       
+        <button *ngIf="next"  (click)="next=false" mat-raised-button color="warn">Previous</button>
+        
+        
+      </div>
