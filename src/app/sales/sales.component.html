@@ -1,5 +1,6 @@
 <!--Tab End -->
-    <div *ngIf="!next" >
+<form [formGroup]="salesForm" class="example-container">
+    <div *ngIf="!next" class="form-group" >
     <nav aria-label="breadcrumb" >
       <ol class="breadcrumb breadcrumBackColor testcolor">
         <li class="breadcrumb-item" ><a class="testcolor" href="#">Sales</a></li>
@@ -7,277 +8,271 @@
         <li class="breadcrumb-item"><a class="testcolor"  href="#">Enquiry Management</a></li>
         <li class="breadcrumb-item " aria-current="page">Create Enquiry</li>
       </ol>
-    </nav>
-
+    </nav>    
     <!-- 1st Row -->
     <h5>Dealer Details</h5>
-    <div class="row">
-        <mat-form-field class="col">
-            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-          
+    <div class="row form-group">
+       <mat-form-field class="col">
+            <input type="text" matInput [matDatepicker]="picker1" formControlName="myDateValue" [value]="myDateValue | date: 'MM/dd/yyyy'"  placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>           
 
-    <mat-form-field class="col">
+   <mat-form-field class="col">
       <mat-label>Dealer Branch/ Outlet</mat-label>
-      <mat-select >
-        <mat-option value="option1">Option 1</mat-option>   
+      <mat-select formControlName="Dealer_Branch" >
+        <mat-option *ngFor="let DBranch of dBranch" [value]="DBranch.value"> {{DBranch.viewValue}}</mat-option>    
       </mat-select>
     </mat-form-field>
 
     <mat-form-field class="col">
       <mat-label>Sales Officers</mat-label>
-      <mat-select >
-        <mat-option value="option1">Option 1</mat-option>   
+      <mat-select formControlName="Sales_Officers" >
+        <mat-option *ngFor="let SalesOfficers of salesOfficers" [value]="SalesOfficers.value"> {{SalesOfficers.viewValue}}</mat-option> 
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field class="col">
+   <mat-form-field class="col">
       <mat-label>Source</mat-label>
-      <mat-select >
-        <mat-option value="option1">Option 1</mat-option>   
+      <mat-select formControlName="Source_only">
+        <mat-option *ngFor="let Sources of sourceOnly" [value]="Sources.value"> {{Sources.viewValue}}</mat-option>   
       </mat-select>
     </mat-form-field>
 
     <mat-form-field class="col">
       <mat-label>Source Details</mat-label>
-      <mat-select >
-        <mat-option value="option1">Option 1</mat-option>   
+      <mat-select formControlName="Source_Details">
+        <mat-option *ngFor="let SourceDetails of sourceDetails" [value]="SourceDetails.value"> {{SourceDetails.viewValue}}</mat-option>  
       </mat-select>
     </mat-form-field>
 
     <mat-form-field class="col">
       <mat-label>Ongoing Events</mat-label>
-      <mat-select >
-        <mat-option value="option1">Option 1</mat-option>   
+      <mat-select formControlName="On_Going_Events">
+        <mat-option *ngFor="let OnGoingEvents of onGoingEvents" [value]="OnGoingEvents.value"> {{OnGoingEvents.viewValue}}</mat-option> 
       </mat-select>
     </mat-form-field>
 
     </div>
-    <br>
-    <!-- 1st Row ends -->
+   
+  <!--1st row ends-->
 
-    <!-- 2nd Row Starts -->
+  <!-- 2nd Row Starts -->
     <h5>Prospect Details</h5>
       <div class="row">
           
           <mat-form-field class="col">
               <mat-label>Customer Type</mat-label>
-              <mat-select >
-                <mat-option value="option1">Option 1</mat-option>   
+              <mat-select formControlName="Customer_Type">
+                <mat-option *ngFor="let CType of customerType" [value]="CType.value"> {{CType.viewValue}}</mat-option>  
               </mat-select>
             </mat-form-field>
 
             <mat-form-field class="col">
                 <mat-label>Title</mat-label>
-                <mat-select >
-                  <mat-option value="option1">Option 1</mat-option>   
+                <mat-select formControlName="Title_Details">
+                  <mat-option *ngFor="let TDetails of titleDetails" [value]="TDetails.value"> {{TDetails.viewValue}}</mat-option> 
                 </mat-select>
               </mat-form-field>
               
 
         <mat-form-field appearance="outline" class="col">
           <mat-label>First Name </mat-label>
-          <input matInput >      
+          <input matInput formControlName="firstName">      
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="col">
               <mat-label>Relation</mat-label>
-              <input matInput >                  
+              <input matInput formControlName="relation" >                  
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="col">
               <mat-label>Middle Name</mat-label>
-              <input matInput >                   
+              <input matInput formControlName="middleName"  >                   
             </mat-form-field>
             
             <mat-form-field appearance="outline" class="col">
               <mat-label>Last Name</mat-label>
-              <input matInput >
+              <input matInput formControlName="lastName" >
             </mat-form-field>    
       
     </div>
     <!-- 2nd Row ends -->
-
     <!-- 3rd Row Starts -->
 
       <div class="row">
-          
-          <mat-form-field appearance="outline" class="col">
-              <mat-label>Date of Birth </mat-label>
-              <input matInput >         
-            </mat-form-field>
+          <mat-form-field class="col">
+              <input type="text" matInput [matDatepicker]="picker2"  formControlName="myBirthDate" [value]="myDateValue | date: 'MM/dd/yyyy'"  placeholder="Date Of Birth">
+              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field> 
 
             <mat-form-field class="col">
                 <mat-label>Age</mat-label>
-                <mat-select >
-                  <mat-option value="option1">Option 1</mat-option>   
+                <mat-select formControlName="Age_Details">
+                  <mat-option *ngFor="let AgeDetails of ageDetails" [value]="AgeDetails.value"> {{AgeDetails.viewValue}}</mat-option> 
                 </mat-select>
               </mat-form-field>
               
 
         <mat-form-field appearance="outline" class="col">
           <mat-label>Mobile Number </mat-label>
-          <input matInput >      
+          <input matInput formControlName="mobileNumber">      
         </mat-form-field>
 
         <mat-form-field appearance="outline" class="col">
               <mat-label>Alternet Mobile Number</mat-label>
-              <input matInput >         
+              <input matInput formControlName="altMobileNumber">         
             </mat-form-field>
             
             <mat-form-field appearance="outline" class="col">
               <mat-label>Email</mat-label>
-              <input matInput >
+              <input matInput formControlName="email" >
             </mat-form-field> 
 
               <mat-form-field class="col">
                   <mat-label>Country</mat-label>
-                  <mat-select >
-                    <mat-option value="option1">Option 1</mat-option>   
+                  <mat-select formControlName="Country_see" >
+                    <mat-option *ngFor="let CountrySee of countrySee" [value]="CountrySee.value"> {{CountrySee.viewValue}}</mat-option> 
                   </mat-select>
                 </mat-form-field> 
       
-    </div>
+    </div> 
     <!-- 3rd Row ends -->
-
-    <!-- 4th Row Starts -->
+     <!-- 4th Row Starts -->
 
       <div class="row">
 
           <mat-form-field appearance="outline" class="col">
               <mat-label>Territory </mat-label>
-              <input matInput >      
+              <input matInput formControlName="territory">      
             </mat-form-field>
 
             <mat-form-field class="col">
                 <mat-label>State</mat-label>
-                <mat-select >
-                  <mat-option value="option1">Option 1</mat-option>   
+                <mat-select formControlName="State_See">
+                  <mat-option *ngFor="let StateDetails of stateDetails" [value]="StateDetails.value"> {{StateDetails.viewValue}}</mat-option> 
                 </mat-select>
               </mat-form-field>
               
 
               <mat-form-field class="col">
                   <mat-label>District</mat-label>
-                  <mat-select >
-                    <mat-option value="option1">Option 1</mat-option>   
+                  <mat-select formControlName="District_see" >
+                    <mat-option *ngFor="let districts of district" [value]="districts.value"> {{districts.viewValue}}</mat-option>  
                   </mat-select>
                 </mat-form-field>
 
         <mat-form-field appearance="outline" class="col">
               <mat-label>Tehsil</mat-label>
-              <input matInput >       
+              <input matInput formControlName="Thesil_see" >       
             </mat-form-field> 
 
               <mat-form-field class="col">
                   <mat-label>City/Village</mat-label>
-                  <mat-select >
-                    <mat-option value="option1">Option 1</mat-option>   
+                  <mat-select formControlName="City_Village">
+                    <mat-option *ngFor="let CityVillage of cityVillage" [value]="CityVillage.value"> {{CityVillage.viewValue}}</mat-option> 
                   </mat-select>
                 </mat-form-field>
             
             
             <mat-form-field appearance="outline" class="col">
               <mat-label>Pin Code</mat-label>
-              <input matInput >
+              <input matInput formControlName="Pincode">
             </mat-form-field>    
       
-    </div>
+    </div> 
     <!--4th  Row ends -->
-
-    <!-- 5th Row Starts -->
+     <!-- 5th Row Starts -->
     <h5>Prospect Background</h5>
       <div class="row">
           
           <mat-form-field class="col">
               <mat-label>Annual Income</mat-label>
-              <mat-select >
-                <mat-option value="option1">Option 1</mat-option>   
+              <mat-select formControlName="Annual_Income">
+                <mat-option *ngFor="let AnnualIncome of annualIncome" [value]="AnnualIncome.value"> {{AnnualIncome.viewValue}}</mat-option> 
               </mat-select>
             </mat-form-field>
 
             <mat-form-field class="col">
                 <mat-label>Occupation</mat-label>
-                <mat-select >
-                  <mat-option value="option1">Option 1</mat-option>   
+                <mat-select formControlName="Occupation_See">
+                  <mat-option *ngFor="let Occupation of occupation" [value]="Occupation.value"> {{Occupation.viewValue}}</mat-option> 
                 </mat-select>
               </mat-form-field>
               
 
         <mat-form-field appearance="outline" class="col">
           <mat-label>Land Size (In Acres) </mat-label>
-          <input matInput >
+          <input matInput formControlName="Land_Size">
           </mat-form-field>
 
           <mat-form-field class="col">
               <mat-label>Soil Type Consistency</mat-label>
-              <mat-select >
-                <mat-option value="option1">Option 1</mat-option>   
+              <mat-select formControlName="Soil_Consistancy">
+                <mat-option *ngFor="let SoilConsistancy of soilConsistancy" [value]="SoilConsistancy.value"> {{SoilConsistancy.viewValue}}</mat-option> 
               </mat-select>
             </mat-form-field>
             
             
             <mat-form-field class="col">
                 <mat-label>Crops Grown</mat-label>
-                <mat-select >
-                  <mat-option value="option1">Option 1</mat-option>   
+                <mat-select formControlName="Crops_Grown">
+                  <mat-option *ngFor="let CropsGrown of cropsGrown" [value]="CropsGrown.value"> {{CropsGrown.viewValue}}</mat-option>  
                 </mat-select>
               </mat-form-field>
             
             
             <mat-form-field appearance="outline" class="col">
               <mat-label>Wheat Rice</mat-label>
-              <input matInput >
+              <input matInput formControlName="Wheat_Rice">
             </mat-form-field>    
       
-    </div>
+    </div> 
     <!-- 5th Row ends -->
-
-    <!-- 6th Row Starts -->
+     <!-- 6th Row Starts -->
     <h5>Tractor Details</h5>
       <div class="row">
           
           <mat-form-field class="col">
               <mat-label>Make</mat-label>
-              <mat-select >
-                <mat-option value="option1">Option 1</mat-option>   
+              <mat-select formControlName="Mark_See">
+                <mat-option *ngFor="let Makes of make" [value]="Makes.value"> {{Makes.viewValue}}</mat-option>  
               </mat-select>
             </mat-form-field>
 
             <mat-form-field class="col">
                 <mat-label>Model</mat-label>
-                <mat-select >
-                  <mat-option value="option1">Option 1</mat-option>   
+                <mat-select formControlName="Model_See">
+                  <mat-option *ngFor="let models of model" [value]="models.value"> {{models.viewValue}}</mat-option> 
                 </mat-select>
               </mat-form-field>
               
 
               <mat-form-field class="col">
                   <mat-label>HP</mat-label>
-                  <mat-select >
-                    <mat-option value="option1">Option 1</mat-option>   
+                  <mat-select formControlName="HP_See" >
+                    <mat-option *ngFor="let HP of hp" [value]="HP.value"> {{HP.viewValue}}</mat-option> 
                   </mat-select>
                 </mat-form-field>
                 
           
         <mat-form-field appearance="outline" class="col">
               <mat-label>Relation</mat-label>
-              <input matInput >         
+              <input matInput formControlName="relation_see">         
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="col">
               <mat-label>Middle Name</mat-label>
-              <input matInput >         
+              <input matInput formControlName="Middle_Name">         
             </mat-form-field>
 
             <mat-form-field appearance="outline" class="col">
               <mat-label>Last Name</mat-label>
-              <input matInput >
+              <input matInput formControlName="Last_Name">
             </mat-form-field>    
       
-    </div>
+    </div> 
     <!-- 6th Row ends -->
   </div>
   <div  align="center"  class="example-button-row">
@@ -308,67 +303,66 @@
         
         <mat-form-field class="col">
             <mat-label>PTO Driven Equipment</mat-label>
-            <mat-select >
-              <mat-option value="option1">Option 1</mat-option>   
+            <mat-select formControlName="PTO">
+              <mat-option *ngFor="let Pto of pto" [value]="Pto.value"> {{Pto.viewValue}}</mat-option>  
             </mat-select>
           </mat-form-field>
 
           <mat-form-field class="col">
               <mat-label>Select Make</mat-label>
-              <mat-select >
-                <mat-option value="option1">Option 1</mat-option>   
+              <mat-select formControlName="Select_Make">
+                <mat-option *ngFor="let SelectMake of selectMake" [value]="SelectMake.value"> {{SelectMake.viewValue}}</mat-option> 
               </mat-select>
             </mat-form-field>
             
 
             <mat-form-field class="col">
                 <mat-label>Equipment Make</mat-label>
-                <mat-select >
-                  <mat-option value="option1">Option 1</mat-option>   
+                <mat-select formControlName="Equipment_Make">
+                  <mat-option *ngFor="let EquipmentMake of equipmentMake" [value]="EquipmentMake.value"> {{EquipmentMake.viewValue}}</mat-option> 
                 </mat-select>
               </mat-form-field>
               
         
               <mat-form-field class="col">
                   <mat-label>Select Product</mat-label>
-                  <mat-select >
-                    <mat-option value="option1">Option 1</mat-option>   
+                  <mat-select formControlName="Select_Product">
+                    <mat-option *ngFor="let SelectProduct of selectProduct" [value]="SelectProduct.value"> {{SelectProduct.viewValue}}</mat-option>  
                   </mat-select>
                 </mat-form-field>
 
          <div class="col">
 
-         </div> 
+         </div>  
          <div class="col">
 
-          </div> 
-    
-  </div>
-  <!-- 1st Row ends -->
-
-              <!-- 2nd Row Starts -->
-              <h5>Interested Machine Details</h5>
+        </div> 
+  
+</div>
+<!-- 1st Row ends -->
+ <!-- 2nd Row Starts -->
+               <h5>Interested Machine Details</h5>
               <div class="row">
                   
                   <mat-form-field class="col">
                       <mat-label>Select Product Catagory</mat-label>
-                      <mat-select >
-                        <mat-option value="option1">Option 1</mat-option>   
+                      <mat-select formControlName="SelectProductCatagory">
+                        <mat-option *ngFor="let SPC of selectProductCatagory" [value]="SPC.value"> {{SPC.viewValue}}</mat-option> 
                       </mat-select>
                     </mat-form-field>
 
                     <mat-form-field class="col">
                         <mat-label>Select Product Sub Catagory</mat-label>
-                        <mat-select >
-                          <mat-option value="option1">Option 1</mat-option>   
+                        <mat-select formControlName="ProductSubCatagory">
+                          <mat-option *ngFor="let PSC of productSubCatagory" [value]="PSC.value"> {{PSC.viewValue}}</mat-option> 
                         </mat-select>
                       </mat-form-field>
                       
 
                       <mat-form-field class="col">
                           <mat-label>Select Product Type</mat-label>
-                          <mat-select >
-                            <mat-option value="option1">Option 1</mat-option>   
+                          <mat-select formControlName="Product_Type">
+                            <mat-option *ngFor="let ProductType of productType" [value]="ProductType.value"> {{ProductType.viewValue}}</mat-option> 
                           </mat-select>
                         </mat-form-field>
                      
@@ -382,11 +376,11 @@
 
                     </div> 
               
-              </div>
+              </div> 
               <!-- 2nd Row ends -->
 
-            <!-- 3rd Row Starts -->
-
+              <!-- 3rd Row Starts -->
+              <div class="row"> 
             <table class="table table-borderless">
                 <thead>
                   <tr>
@@ -403,9 +397,9 @@
                     <td></td>
                     <td></td>
                     <td> <mat-form-field >
-                      <mat-label>Select </mat-label>
-                      <mat-select >
-                        <mat-option value="option1">Option 1</mat-option>   
+                      <mat-label>Select1 </mat-label>
+                      <mat-select formControlName="Select_1">
+                        <mat-option *ngFor="let Select1 of select1" [value]="Select1.value"> {{Select1.viewValue}}</mat-option> 
                       </mat-select>
                     </mat-form-field></td>
                   </tr>
@@ -415,9 +409,9 @@
                     <td></td>
                     <td></td>
                     <td><mat-form-field >
-                      <mat-label>Select </mat-label>
-                      <mat-select >
-                        <mat-option value="option1">Option 1</mat-option>   
+                      <mat-label>Select2 </mat-label>
+                      <mat-select formControlName="Select_2">
+                        <mat-option *ngFor="let Select2 of select2" [value]="Select2.value"> {{Select2.viewValue}}</mat-option> 
                       </mat-select>
                     </mat-form-field></td>
                   </tr>
@@ -428,9 +422,9 @@
                     </td>
                     <td></td>
                     <td><mat-form-field >
-                      <mat-label>Select </mat-label>
-                      <mat-select >
-                        <mat-option value="option1">Option 1</mat-option>   
+                      <mat-label>Select 3</mat-label>
+                      <mat-select formControlName="Select_3">
+                        <mat-option *ngFor="let Select3 of select3" [value]="Select3.value"> {{Select3.viewValue}}</mat-option> 
                       </mat-select>
                     </mat-form-field></td>
                   </tr>
@@ -441,9 +435,9 @@
                     </td>
                     <td></td>
                     <td><mat-form-field >
-                      <mat-label>Select </mat-label>
-                      <mat-select >
-                        <mat-option value="option1">Option 1</mat-option>   
+                      <mat-label>Select4 </mat-label>
+                      <mat-select formControlName="Select_4">
+                        <mat-option *ngFor="let Select4 of select4" [value]="Select4.value"> {{Select4.viewValue}}</mat-option> 
                       </mat-select>
                     </mat-form-field></td>
                   </tr>
@@ -454,73 +448,74 @@
                     </td>
                     <td></td>
                     <td><mat-form-field >
-                      <mat-label>Select </mat-label>
-                      <mat-select >
-                        <mat-option value="option1">Option 1</mat-option>   
+                      <mat-label>Select5 </mat-label>
+                      <mat-select formControlName="Select_5">
+                        <mat-option *ngFor="let Select5 of select5" [value]="Select5.value"> {{Select5.viewValue}}</mat-option> 
                       </mat-select>
                     </mat-form-field></td>
                   </tr>
                 </tbody>
-              </table>
+              </table> 
+            </div>
             <!-- 3rd Row ends -->
-
-          <!-- 4th Row Starts -->
-        
-          <div class="row">
+              <!-- 4th Row Starts -->
+      <div class="row">
               
               <mat-form-field class="col">
                   <mat-label>Purpose of Purchase</mat-label>
-                  <mat-select >
-                    <mat-option value="option1">Option 1</mat-option>   
+                  <mat-select formControlName="Purpose_OfPurchase" >
+                      <mat-option *ngFor="let PurposeOfPurchase of purposeOfPurchase" [value]="PurposeOfPurchase.value">{{PurposeOfPurchase.viewValue}}</mat-option>   
                   </mat-select>
                 </mat-form-field>
 
                 <mat-form-field class="col">
                     <mat-label>Whatever Subsidy Required</mat-label>
-                    <mat-select >
-                      <mat-option value="option1">Option 1</mat-option>   
+                    <mat-select formControlName="Whatever_SubsidyRequired">
+                      <mat-option *ngFor="let SubsidyRequired of subsidyRequired" [value]="SubsidyRequired.value"> {{SubsidyRequired.viewValue}}</mat-option> 
                     </mat-select>
                   </mat-form-field>
                   
 
                   <mat-form-field class="col">
                       <mat-label>Payment Mode</mat-label>
-                      <mat-select >
-                        <mat-option value="option1">Option 1</mat-option>   
+                      <mat-select formControlName="Payment_Mode">
+                        <mat-option *ngFor="let PaymentMode of paymentMode" [value]="PaymentMode.value"> {{PaymentMode.viewValue}}</mat-option> 
                       </mat-select>
                     </mat-form-field>
 
                  <mat-form-field class="col">
-                        <input matInput [matDatepicker]="picker" placeholder="Expected Dilevery Date">
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                      </mat-form-field>
+                        <input matInput [matDatepicker]="picker3" formControlName="ExpectedDate" placeholder="Expected Delivery Date">
+                        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                        <mat-datepicker #picker3></mat-datepicker>
+                      </mat-form-field> 
 
                      
-            <!--  <mat-form-field class="col">
-                          <input matInput [matDatepicker]="picker" placeholder="Next Folloe-up Date">
-                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                          <mat-datepicker #picker></mat-datepicker>
+           <mat-form-field class="col">
+                          <input matInput [matDatepicker]="picker4" formControlName="NextDate" placeholder="Next Follow-up Date">
+                          <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                          <mat-datepicker #picker4></mat-datepicker>
                         </mat-form-field>
 
-                           <mat-form-field class="col">
+                       <!--  <mat-form-field class="col">
                             <mat-label>Recommendate Financer</mat-label>
                             <mat-select >
                               <mat-option value="option1">Option 1</mat-option>   
                             </mat-select>
-                          </mat-form-field>--> 
+                          </mat-form-field> -->  
           
           </div>
-          <!-- 4th Row ends -->
+           <!--4th Row ends-->
 
 
-    </div>
-  <!--Previous Page Div Ends-->
+   <!--</div> --> 
 
  
       <div  align="center"  class="example-button-row">
        
-        <button *ngIf="next"  (click)="next=false" mat-raised-button color="warn">Previous</button>
-        
-        
+        <button *ngIf="next"  (click)="next=false" mat-raised-button color="warn"  style="margin-right: 16px"  >Previous</button>
+
+
+        <button  *ngIf="next"  (click)="openDialogSubmit()" mat-raised-button color="warn">Submit</button>
       </div>
+      </div>
+    </form>

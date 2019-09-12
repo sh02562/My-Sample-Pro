@@ -1,0 +1,243 @@
+
+<mat-dialog-content>
+    <h6>Dealer Details</h6>
+    <table style="width:100%"  class="mat-elevation-z8">
+<tr>
+        
+      <th mat-header-cell >Date:</th>     
+      <td mat-cell > {{data.picked | date: 'mediumDate'}}</td>
+ 
+        <th mat-header-cell >Dealer Branch:</th>
+     <!--<td mat-cell *matCellDef="let element"> {{element.position}} </td>--> 
+      <td mat-cell > {{data.dealerbranch}}</td>
+     
+      <th mat-header-cell >Sales Office:</th>     
+      <td mat-cell > {{data.salesoffices}}</td>
+
+      <th mat-header-cell >Source:</th>     
+       <td mat-cell > {{data.sources}}</td>
+      
+       <th mat-header-cell >Source Details:</th>      
+       <td mat-cell > {{data.sourcedetails}}</td>
+     
+      <th mat-header-cell >On Going Events:</th>      
+      <td mat-cell > {{data.ongoingevents}}</td>
+</tr>   
+  
+</table>
+<br>
+<h6>Personal Details</h6>
+
+<table style="width:100%"  class="mat-elevation-z8">
+<tr>
+  <th mat-header-cell>Customer Type:</th>
+ <!--<td mat-cell *matCellDef="let element"> {{element.position}} </td>--> 
+  <td mat-cell> {{data.customertype}}</td>
+ 
+  <th mat-header-cell>Title Details: </th>     
+  <td mat-cell> {{data.titledetails}}</td>
+
+  <th mat-header-cell>First Name: </th>     
+   <td mat-cell> {{data.firstname}}</td>
+  
+   <th mat-header-cell>Relation:</th>      
+   <td mat-cell> {{data.relation}}</td>
+ 
+  <th mat-header-cell>Middle Name:</th>      
+  <td mat-cell> {{data.middlename}}</td>
+  
+  <th mat-header-cell>Last Name:</th>      
+  <td mat-cell> {{data.lastname}}</td>
+</tr> 
+<tr>
+    <th mat-header-cell>Date Of Birth:</th>     
+      <td mat-cell> {{data.birthdate | date: 'mediumDate'}}</td>
+   
+    <th mat-header-cell>Age Details: </th>     
+    <td mat-cell > {{data.agedetails}}</td>
+  
+    <th mat-header-cell>Mobile Number: </th>     
+     <td mat-cell > {{data.mobilenumber}}</td>
+    
+     <th mat-header-cell>Alternet Mobile Number:</th>      
+     <td mat-cell > {{data.altmobilenumber}}</td>
+   
+    <th mat-header-cell>Email:</th>      
+    <td mat-cell > {{data.Email}}</td>
+    
+    <th mat-header-cell>Country:</th>      
+    <td mat-cell > {{data.countrysee}}</td>
+  </tr> 
+
+  <tr>
+    <th mat-header-cell>Territory:</th>     
+      <td mat-cell > {{data.territory}}</td>
+   
+    <th mat-header-cell>State: </th>     
+    <td mat-cell > {{data.statesee}}</td>
+  
+    <th mat-header-cell>District: </th>     
+     <td mat-cell > {{data.districts}}</td>
+    
+     <th mat-header-cell>Tehsil:</th>      
+     <td mat-cell > {{data.thesil}}</td>
+   
+    <th mat-header-cell>City/Village:</th>      
+    <td mat-cell > {{data.cityVillage}}</td>
+    
+    <th mat-header-cell>Pincode:</th>      
+    <td mat-cell > {{data.Pincode}}</td>
+  </tr> 
+</table>
+<br>
+<h6>Prospect Background</h6>
+<table style="width:100%"  class="mat-elevation-z8">
+<tr>
+    
+  <th mat-header-cell>Annual Income:</th>     
+  <td mat-cell> {{data.annualincome}}</td>
+
+  <th mat-header-cell>Occupation:</th>
+  <td mat-cell> {{data.occupationsee}}</td>
+ 
+  <th mat-header-cell>Land Size (In Acres):</th>     
+  <td mat-cell> {{data.landsize}}</td>
+
+  <th mat-header-cell>Soil Type Consistency:</th>     
+  <td mat-cell> {{data.soilconsistancy}}</td>
+  
+  <th mat-header-cell>Crops Grown:</th>      
+  <td mat-cell> {{data.cropsgrown}}</td>
+ 
+  <th mat-header-cell>Wheat Rice:</th>      
+  <td mat-cell> {{data.wheatrice}}</td>
+</tr>   
+</table>
+<br>
+<h6>Tractor Details</h6>
+<table style="width:100%"  class="mat-elevation-z8">
+<tr>
+    
+  <th mat-header-cell>Make:</th>     
+  <td mat-cell> {{data.makesee}}</td>
+
+  <th mat-header-cell>Model:</th>
+  <td mat-cell> {{data.modelsee}}</td>
+ 
+  <th mat-header-cell>HP:</th>     
+  <td mat-cell> {{data.hps}}</td>
+
+  <th mat-header-cell>Relation:</th>     
+  <td mat-cell> {{data.relationsee}}</td>
+  
+  <th mat-header-cell>Middle Name:</th>      
+  <td mat-cell> {{data.MiddleName}}</td>
+ 
+  <th mat-header-cell>Last Name:</th>      
+  <td mat-cell> {{data.LastName}}</td>
+</tr>   
+</table>
+<br>
+<h6>Existing Machine Details</h6>
+<table style="width:100%"  class="mat-elevation-z8">
+<tr>
+    
+  <th mat-header-cell>PTO Driven Equipment:</th>     
+  <td mat-cell> {{data.pto}}</td>
+
+  <th mat-header-cell>Select Make:</th>
+  <td mat-cell> {{data.selectMake}}</td>
+ 
+  <th mat-header-cell>Equipment Make:</th>     
+  <td mat-cell> {{data.equipmentMake}}</td>
+
+  <th mat-header-cell>Select Product:</th>     
+  <td mat-cell> {{data.selectProduct}}</td>
+  
+</tr>   
+</table>
+<br>
+<h6>Interested Machine Details</h6>
+<table style="width:100%"  class="mat-elevation-z8">
+<tr>
+    
+  <th mat-header-cell>Select Product Catagory:</th>     
+  <td mat-cell> {{data.selectproductcatagory}}</td>
+
+  <th mat-header-cell>Select Product Sub Catagory:</th>
+  <td mat-cell> {{data.Productsubcatagory}}</td>
+ 
+  <th mat-header-cell>Select Product Type:</th>     
+  <td mat-cell> {{data.productype}}</td>
+  
+</tr>   
+</table>
+<br>
+
+<table style="width:100%"  class="mat-elevation-z8">
+<tr>
+    
+  <th mat-header-cell>Sr No.</th>   
+  <th mat-header-cell>Specification</th> 
+  <th mat-header-cell>Select Selection</th>  
+  
+</tr>  
+<tr>
+    <td mat-cell> 01</td>
+    <td mat-cell> Model</td>
+    <td mat-cell> {{data.select1}}</td> 
+  
+</tr> 
+<tr>
+  <td mat-cell> 02</td>
+  <td mat-cell> Variant</td>
+  <td mat-cell> {{data.select2}}</td>
+</tr>
+<tr>
+    <td mat-cell> 03</td>
+    <td mat-cell> Speed</td>
+    <td mat-cell> {{data.select3}}</td> 
+
+</tr>
+<tr>
+    <td mat-cell> 04</td>
+    <td mat-cell> Blade</td>
+    <td mat-cell> {{data.select4}}</td>
+</tr>
+<tr>
+    <td mat-cell> 05</td>
+    <td mat-cell> GearType</td>
+    <td mat-cell> {{data.select5}}</td> 
+</tr>
+</table>
+<br>
+
+<table style="width:100%"  class="mat-elevation-z8">
+<tr>
+    
+  <th mat-header-cell>Purpose of Purchase:</th>     
+  <td mat-cell> {{data.purposeofpurchase}}</td>
+
+  <th mat-header-cell>Whatever Subsidy Required:</th>
+  <td mat-cell> {{data.subsidyrequired}}</td>
+ 
+  <th mat-header-cell>Payment Mode:</th>     
+  <td mat-cell> {{data.paymentmode}}</td>
+
+  <th mat-header-cell>Expected Delivery Date:</th>     
+  <td mat-cell> {{data.expecteddate | date: 'mediumDate'}}</td>
+
+  <th mat-header-cell>Next Follow-up Date:</th>     
+  <td mat-cell> {{data.nextdate | date: 'mediumDate'}}</td>
+  
+</tr>   
+</table>
+</mat-dialog-content>  
+<br>
+<mat-dialog-actions>
+ <!-- <button mat-button mat-dialog-close style="background-color:yellow;margin-left:auto;margin-right:auto;display:block;margin-top:22%;margin-bottom:0%">OK</button>-->
+  <button mat-button mat-dialog-close mat-raised-button color="warn" style="margin-left:auto;margin-right:auto;display:block;margin-top:2%;margin-bottom:0%">OK</button>
+  <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog.
+  <button mat-button [mat-dialog-close]="true">Yes</button> -->
+</mat-dialog-actions>
+

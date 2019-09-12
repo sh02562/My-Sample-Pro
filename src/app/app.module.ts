@@ -19,6 +19,11 @@ import { EventManagementComponent } from './event-management/event-management.co
 import { ReportsComponent } from './reports/reports.component';
 import { AccountStatementComponent } from './account-statement/account-statement.component';
 import { ExportComponent } from './export/export.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { SalesDialogComponent } from './sales-dialog/sales-dialog.component'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table'; 
+import { CdkColumnDef } from '@angular/cdk/table';
 
 
 @NgModule({
@@ -36,16 +41,24 @@ import { ExportComponent } from './export/export.component';
     EventManagementComponent,
     ReportsComponent,
     AccountStatementComponent,
-    ExportComponent
+    ExportComponent,
+    SalesDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatDialogModule,
+    FormsModule,
+    MatTableModule,
+    ReactiveFormsModule,
     MDBBootstrapModule.forRoot()
     ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CdkColumnDef],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    SalesDialogComponent 
+  ]
 })
 export class AppModule { }

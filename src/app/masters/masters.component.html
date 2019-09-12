@@ -1,1 +1,38 @@
-<p> I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.</p>
+<!--<p> I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.I am in Masters.</p> -->
+<!--The content below is only a placeholder and can be replaced.-->
+<form [formGroup]="userForm" class="example-container">
+<h5>Existing Machine Details</h5>
+<div class="row">
+    
+   
+      <mat-form-field appearance="outline" class="col" >
+        <mat-label>First Field</mat-label>
+        <input matInput formControlName="name" placeholder="Placeholder"> 
+          </mat-form-field>
+
+         
+      <mat-form-field  class="col">
+          <mat-label>Select Make</mat-label>
+          <mat-select  formControlName="select_mark" >
+            <mat-option *ngFor="let mark of Marks" [value]="mark.value"> {{mark.viewValue}}</mat-option>   
+          </mat-select>
+         </mat-form-field>
+        
+        
+
+        <mat-form-field class="col">
+            <mat-label>Equipment Make</mat-label>
+            <mat-select formControlName="option_equipment">
+              <mat-option value="option1">Option Equipement</mat-option>   
+            </mat-select>
+          </mat-form-field>
+            
+     </div> 
+
+
+<div style="text-align:center">
+  <button mat-button (click)="openDialogSubmit()">Submit</button>
+</div>
+
+
+</form>
